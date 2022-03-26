@@ -10,38 +10,46 @@
 }
 
 body {
-	position: relative;
+	position: absolute;
 	font-family: monospace;
 	overflow: hidden;
+	display: block;
 	width: 100%;
-	height: fit-content;
+	height: 100%;
 }
 
-.warnings {
-	background-color: red;
-	color: white;
-	height: fit-content;
-	width: 100%;
-}
-
-.swf {
+#embed-container {
 	position: relative;
 	display: block;
-	overflow: hidden;
+	border: none;
 	width: fit-content;
 	height: fit-content;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#error-msg {
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	font-size: 16px;
+	font-weight: 700;
+	color: red;
+	cursor: not-allowed;
 }
 		</style>
 		<script type="text/javascript" src="https://ruochenj001.github.io/flash-games/ruffle/ruffle.js"></script>
 	</head>
 	<body>
 		<noscript>
-			<p class="warnings"><strong>WARNING: </strong>This website requires JavaScript enabled, please enable it in your browser settings and reload this page.</p>
+			<div id="error-msg">Error: JavaScript is disabled, which is required by this page. Please enable it in your browser settings and reload this page.</p>
 		</noscript>
-		<div class="swf" dir="ltr" trbidi="on">
-			<embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="https://img-hws.y8.com/cloud/y8-flash-game/contents/item_versions/flash_games/12062/original/gold_miner_xploit_machine_edition_2009.swf" type="application/x-shockwave-flash"></embed>
+		<div id="embed-container">
+			<embed
+				type="application/x-shockwave-flash"
+				src="https://ruochenj001.github.io/flash-games/plant_vs_zombies_2.swf"
+				pluginspage="http://www.macromedia.com/go/getflashplayer"
+				width="1024" height="768"></embed>
 		</div>
 	</body>
 </html>
